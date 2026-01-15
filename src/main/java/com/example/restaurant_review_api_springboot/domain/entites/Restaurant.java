@@ -1,11 +1,11 @@
 package com.example.restaurant_review_api_springboot.domain.entites;
 
 
-import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 import org.springframework.data.elasticsearch.annotations.Field;
 import org.springframework.data.elasticsearch.annotations.FieldType;
@@ -15,7 +15,7 @@ import org.springframework.data.elasticsearch.core.geo.GeoPoint;
 import java.util.ArrayList;
 import java.util.List;
 
-@Document(indexName = "restaurants")
+@Document(indexName = "restaurants",createIndex = false)
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
